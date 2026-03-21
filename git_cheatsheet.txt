@@ -1,0 +1,46 @@
+================================================================================
+                   GIT CHEAT SHEET FOR ML MICROPROJECTS
+================================================================================
+
+1. SETUP & INITIALIZATION
+--------------------------------------------------------------------------------
+git config --global user.name "Name"  : Sets your commit author name
+git init                              : Initializes a new local Git repository
+git clone [URL]                       : Downloads a repo from GitHub
+
+2. THE CORE WORKFLOW (Use these every time you update your code)
+--------------------------------------------------------------------------------
+git status                            : Shows modified and untracked files
+git add .                             : Stages all changes for the next commit
+git add [file_name]                   : Stages a specific file (e.g., main.py)
+git diff                              : Shows exact line changes before staging
+git commit -m "Your message"          : Saves a snapshot of your staged files
+
+3. SYNCING WITH GITHUB
+--------------------------------------------------------------------------------
+git remote add origin [URL]           : Links local folder to a GitHub repo
+git push -u origin main               : Uploads local commits to GitHub (first time)
+git push                              : Uploads local commits (subsequent times)
+git pull origin main                  : Downloads and merges changes from GitHub
+git pull origin main --rebase         : Pulls changes and resolves branch history
+git fetch                             : Downloads changes without merging them
+
+4. BRANCHING (For testing new algorithms safely)
+--------------------------------------------------------------------------------
+git branch                            : Lists all local branches
+git checkout -b [branch-name]         : Creates and switches to a new branch
+git checkout main                     : Switches back to the main branch
+git merge [branch-name]               : Merges the branch into your current one
+
+5. UNDOING MISTAKES & CLEANING
+--------------------------------------------------------------------------------
+git restore [file_name]               : Discards local uncommitted changes to a file
+git rm -r --cached .venv              : Stops tracking .venv without deleting it
+git log --oneline                     : Shows a compact history of past commits
+
+================================================================================
+REMINDER: ALWAYS KEEP THESE IN YOUR .gitignore
+- .venv/
+- __pycache__/
+- *.ipynb_checkpoints/
+================================================================================

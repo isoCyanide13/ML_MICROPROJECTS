@@ -52,3 +52,37 @@ git show --name-only
 
 The "Detailed Summary" View:
 git diff --stat origin/main
+
+================================================================================
+                    GIT CORRECTION & UNDO COMMANDS
+================================================================================
+
+1. UNSTAGING (The "Take it back" commands)
+--------------------------------------------------------------------------------
+git restore --staged <file>  : Moves a file from Green (Staged) back to Red (Unstaged)
+git reset <file>             : Older version of the same command
+git restore --staged .       : Unstages EVERY file you just added
+
+2. AMENDING (Fixing the VERY LAST commit)
+--------------------------------------------------------------------------------
+# Use this if you forgot a file or have a typo in the last commit:
+git add <forgotten_file>
+git commit --amend --no-edit  : Adds the file to the last commit (no new message)
+git commit --amend -m "New"   : Changes the message of the last commit
+
+3. REVERTING CHANGES (Going back in time)
+--------------------------------------------------------------------------------
+git restore <file>            : Discards all local changes to a file (DANGER: Permanent)
+git reset --soft HEAD~1       : Deletes the last commit but KEEPS your code staged
+git reset --hard HEAD~1       : Deletes the last commit AND all its code (DANGER)
+
+4. INSPECTING BEFORE PUSHING
+--------------------------------------------------------------------------------
+git show --name-only          : See which files are in your last commit
+git diff --name-only origin/main : See every file waiting to be pushed to GitHub
+git diff --stat origin/main   : See a summary of lines changed (+/-) per file
+
+================================================================================
+PRO-TIP: Only use 'reset --hard' if you want to completely wipe your work
+and start fresh from the last successful save point.
+================================================================================

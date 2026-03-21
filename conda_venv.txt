@@ -1,0 +1,1 @@
+conda create --prefix D:\ML_MicroProject\.venv python=3.12

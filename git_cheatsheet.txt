@@ -44,3 +44,11 @@ REMINDER: ALWAYS KEEP THESE IN YOUR .gitignore
 - __pycache__/
 - *.ipynb_checkpoints/
 ================================================================================
+To see everything waiting to be pushed:
+git diff --name-only origin/main
+
+To see the files in your very last commit:
+git show --name-only
+
+The "Detailed Summary" View:
+git diff --stat origin/main

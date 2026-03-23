@@ -44,11 +44,3 @@ Intra-class Variance  : 551.1104    1.2660
 Latent Std            : 24.3108     1.1499
 KL Divergence         : N/A         34.7583
 KNN Accuracy          : 93.42%      93.75%
-
-───────────────────────────────────────────────
-SAVED MODEL PATHS
-───────────────────────────────────────────────
-AE  : D:\ML_MICROPROJECTS\NN_AudioGen\model
-VAE : D:\ML_MICROPROJECTS\VIB_AE\model
-
-═══════════════════════════════════════════════

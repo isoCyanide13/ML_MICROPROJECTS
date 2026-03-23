@@ -228,6 +228,7 @@ data/
 *.npz
 
 # Personal/Temp Files
+git_cheatsheet.md
 temp.py
 *.txt
 !requirements.txt
